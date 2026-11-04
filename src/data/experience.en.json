@@ -1,0 +1,61 @@
+
+[
+  {
+    "id": "ai-assisted-frontend-developer",
+    "role": "AI-Assisted Frontend Developer",
+    "dates": "Febraury 2026 - August 2026",
+    "company": "Parker Randall Colombia",
+    "responsibilities": [
+      "Developed and optimized interactive web dashboards for electronic invoicing software, significantly improving data visualization and user experience.",
+      "I Leveraged advanced AI tools, including Claude AI, to accelerate the development lifecycle, streamline code drafting, and debug complex data structures.",
+      "Collaborated on building scalable fintech solutions, ensuring seamless integration of real-time billing metrics and financial reports."
+    ]
+  },
+  {
+    "id": "ai-assisted-software-developer",
+    "role": "AI-Assisted Software Developer",
+    "dates": "January 2025 - February 2026",
+    "company": "Virtual-Tec",
+    "responsibilities": [
+      "Developed mobile and web applications using the FlutterFlow platform, integrating real-time services via Firebase.",
+      "Implemented custom functions using Python and Node.js to address business needs and optimize backend logic.",
+      "I have created menu apps for restaurants with Next.js using AI tools like Google Antigravity, in addition to performing web scraping to obtain information about their products and display them in the created apps."
+    ]
+  },
+    {
+    "id": "web-developer",
+    "role": "Web developer",
+    "dates": "December 2023 - January 2025",
+    "company": "MCA Systems",
+    "responsibilities": [
+      "Developed and managed websites using CMS tools like WordPress with Elementor and WPBakery, integrating HTML, CSS, JavaScript, and PHP.",
+      "Built dynamic websites with user management systems, including login sessions, CRUD functionality, and report generation.",
+      "Created interactive web components and applications using React and Astro.",
+      "Managed hosting services and implemented website performance improvements"
+    ]
+  },
+  {
+    "id": "systems-analyst",
+    "role": "Systems Analist",
+    "dates": "January 2022 - December 2023",
+    "company": "Proyección Humana Internacional S.A.S",
+    "responsibilities": [
+      "Integrated technical considerations into design plans, addressing budgets, performance, accessibility, and privacy standards.",
+      "Managed multi-line website hosting services and used WordPress with low-code solutions for custom plugin configurations.",
+      "Connected websites to payment gateways like PayU and PayPal for seamless transactions.",
+      "Developed database-driven forms and reports using native PHP and managed databases with MySQL."
+    ]
+  },
+    {
+    "id": "web-designer-cms-developer",
+    "role": "Web Designer and CMS Developer",
+    "dates": "October 2020 - February 2022",
+    "company": "Whitehub S.A.S",
+    "responsibilities": [
+      "Managed website hosting, domains, DNS configurations, and email accounts using cPanel, GoDaddy, and Zoho.",
+      "Built and maintained WordPress websites using visual builders like Divi and Elementor, and configured WooCommerce for e-commerce.",
+      "Improved website performance using PageSpeed Insights and analyzed site metrics with Google Analytics.",
+      "Implemented application integrations using Zapier and configured push notifications with OneSignal."
+    ]
+  }
+]

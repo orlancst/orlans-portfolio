@@ -1,0 +1,152 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  lang?: "en" | "es";
+  title?: string;
+  description?: string;
+}
+
+const {
+  lang = "en",
+  title = "Developer Portfolio",
+  description = "Personal portfolio of a web developer.",
+} = Astro.props;
+
+const isSpanish = lang === "es";
+
+const homeUrl = isSpanish ? "/es/" : "/";
+const languageUrl = isSpanish ? "/" : "/es/";
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+
+    <script is:inline>
+      try {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+
+        const useDark =
+          savedTheme === "dark" || (savedTheme !== "light" && prefersDark);
+
+        document.documentElement.classList.toggle("dark", useDark);
+      } catch {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+
+  <body
+    class="bg-white text-slate-900 transition-colors
+               dark:bg-slate-950 dark:text-slate-100"
+  >
+    <header
+      class="border-b border-slate-200
+                   dark:border-slate-800"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center
+                  justify-between gap-4 px-5 py-5"
+      >
+        <a href={homeUrl} class="text-lg font-bold tracking-tight">
+          Orlan's Portfolio<span class="text-blue-600">.</span>
+        </a>
+
+        <div class="flex items-center gap-3 sm:gap-5">
+          <a href={`${homeUrl}#projects`} class="text-sm hover:text-blue-600">
+            {isSpanish ? "Proyectos" : "Projects"}
+          </a>
+
+          <a href={`${homeUrl}#contact`} class="text-sm hover:text-blue-600">
+            {isSpanish ? "Contacto" : "Contact"}
+          </a>
+
+          <a
+            href={languageUrl}
+            class="rounded-lg border border-slate-300
+                   px-3 py-2 text-sm font-medium
+                   dark:border-slate-700"
+            aria-label={isSpanish ? "Switch to English" : "Cambiar a español"}
+          >
+            {isSpanish ? "EN" : "ES"}
+          </a>
+
+          <button
+            id="theme-toggle"
+            type="button"
+            class="rounded-lg border border-slate-300
+                   px-3 py-2 text-sm
+                   dark:border-slate-700"
+            aria-label={isSpanish ? "Cambiar tema" : "Toggle color theme"}
+          >
+            <span id="theme-icon" aria-hidden="true"> Dark mode </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer
+      class="border-t border-slate-200 px-5 py-8
+                   text-center text-sm text-slate-500
+                   dark:border-slate-800 dark:text-slate-400"
+    >
+      © {new Date().getFullYear()} Orlan's Portfolio.
+      {isSpanish ? " Todos los derechos reservados." : " All rights reserved."}
+    </footer>
+
+    <script>
+      const toggle = document.querySelector("#theme-toggle");
+      const icon = document.querySelector("#theme-icon");
+
+      function updateThemeIcon() {
+        if (!icon) return;
+
+        const isDark = document.documentElement.classList.contains("dark");
+
+        icon.textContent =
+          isDark && document.documentElement.lang === "es"
+            ? "Modo claro"
+            : isDark && document.documentElement.lang === "en"
+              ? "Light mode"
+              : !isDark && document.documentElement.lang === "es"
+                ? "Modo oscuro"
+                : "Dark mode";
+      }
+
+      updateThemeIcon();
+
+      toggle?.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.toggle("dark");
+
+        try {
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+        } catch {
+          // El tema funciona aunque no se pueda guardar.
+        }
+
+        updateThemeIcon();
+      });
+    </script>
+  </body>
+</html>

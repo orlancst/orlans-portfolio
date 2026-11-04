@@ -1,0 +1,97 @@
+
+[
+  {
+    "id": "overflight-app",
+    "name": "Overflight App",
+    "description": "Una App móvil para gestionar permisos de sobrevuelo a las autoridades de los paises de la ruta.",
+    "objective": "Mejorar el diseño de la app y hacer funcional la lógica para la gestión de permisos de sobrevuelo.",
+    "participation": [
+      "Mejora de la interfaz visual y experiencia de usuario de la aplicación.",
+      "Corrección de funcionalidades vitales como el proceso de pedir una orden de sobrevuelo",
+      "Reestructuración de la base de datos casi al completo."
+    ],
+    "technologies": {
+      "languages": ["Dart", "JavaScript"],
+      "frameworks": ["Flutter"],
+      "tools": ["Firebase", "Custom APIs", "FlutterFlow", "Stripe"]
+    },
+    "implementation": [
+      "Implementar las decisiones de diseño en la aplicación para mejorar las interfaces y la experiencia de usuario, que anteriormente no estaban optimizadas.",
+      "Rehice la lógica de la aplicación para que el proceso de pedir un permiso de sobrevuelo funcione correctamente, usando el flujo de procesos de Flutterflow, como funciones personalizadas de Dart y JavaScript.",
+      "Reorganicé la base de datos de la aplicación, que estaba desorganizada y no era escalable, para que sea más eficiente y fácil de mantener."
+    ],
+    "results": [
+      "La aplicación tiene un diseño más atractivo y una experiencia de usuario más fluida sin falencias de navegación.",
+      "El proceso de solicitud de permisos de sobrevuelo funciona correctamente: Desde la pasarela de pagos hasta el envio de correo del permiso, y la notificación del Permit Number.",
+      "La base de datos organizada facilitó la inserción y busqueda de datos, índices y relaciones entre colecciones, lo que mejora el rendimiento y la escalabilidad de la aplicación."
+    ],
+    "image": {
+      "src": "/images/projects/overflight_app.webp",
+      "alt": "Cover image de la app de Overflight en Google Play"
+    },
+    "url": "https://play.google.com/store/apps/details?id=com.virtualtec.overflight&hl=es_CO"
+  },
+  {
+    "id": "si-18",
+    "name": "Panel administrativo SI-18",
+    "description": "Un dashboard de tres módulos para la operadora de transporte masivo de Transmilenio, SI-18.",
+    "objective": "Implementar el panel administrativo desde el enfoque del frontend que consta de tres módulos: Programación, Contabilidad y Compras.",
+    "participation": [
+      "Fui el encargado directo de crear los módulos, componentes y funcionalidades del proyecto, con ayuda asistida .0de la IA.",
+      "Conectar con la API que el equipo de backend enviaba para obtener datos.",
+      "Participación en las reuniones de planificación, seguimiento de avances y entrega de resultados."
+    ],
+    "technologies": {
+      "languages": ["TypeScript", "HTML", "CSS"],
+      "frameworks": ["React"],
+      "tools": ["Claude Code", "Postman", "VS Code", "DBeaver", "Figma", "Docker"]
+    },
+    "implementation": [
+      "Utilicé React y Tailwind para el desarrollo del frontend, con componentes y gráficos estadisticos reutilizables en cada una de las secciones del dashboard.",
+      "Conecté con la API del backend para obtener datos y mostrarlos en el dashboard en sus respectivos módulos representados en valores, gráficos, tablas y documentos.",
+      "Implementé lógica de autenticación según roles, protección de rutas, manejo de errores y estados de carga de datos."
+    ],
+    "results": [
+      "La implementación del dashboard mejoró la eficiencia en la visualización de datos, que antes era complicada visualizar solo en una base de datos.",
+      "Se obtuvo un feedback positivo de los usuarios finales destinados a utilizarlo.",
+      "Se logró una mejora en la experiencia del usuario al proporcionar un acceso más sencillo a la información crítica."
+    ],
+    "image": {
+      "src": "/images/projects/si18-admin.webp",
+      "alt": "Dashboard administrativo responsive con tablas y tarjetas de métricas"
+    }
+  },
+  {
+    "id": "farmavida",
+    "name": "Droguerias Farmavida",
+    "description": "E-commerce para la venta de productos farmacéuticos y de cuidado personal que opera en Colombia.",
+    "objective": "Mejorar la experiencia y atención del usuario del sitio web.",
+    "participation": [
+      "Tenia acceso total al administrador de WordPress, bases de datos y hosting para la gestión.",
+      "Acceso al flujo de nodos de n8n responsable de la automatización de procesos como un chatbot que sugiere productos a los clientes.",
+      "Posibilidad de modificar los productos y precios del ecommerce tanto por WordPress como por archivos de importación masivos."
+    ],
+    "technologies": {
+      "languages": ["PHP", "JavaScript", "HTML", "CSS"],
+      "frameworks": ["WordPress", "WooCommerce"],
+      "tools": ["n8n", "Postman"]
+    },
+    "implementation": [
+      "Ajuste el idioma de los textos en el apartado de compras y productos del sitio web, que algunos estaban en inglés por el tema instalado.",
+      "Se configuró un nodo de n8n destinado a la atención al cliente a través de un chatbot para sugerir productos según las necesidades del usuario.",
+      "Se hizo un backup al wordpress, ya que el hosting habia caido y se perdió el acceso al sitio web, pero se logró restaurar y recuperar la información de la base de datos y archivos del sitio web.",
+      "Se corrigió un problema al momento de efectuar una compra desde el sitio web que hacia que el cliente no estuviera seguro de que la compra se había realizado correctamente, ya que no recibía un correo de confirmación de la compra.",
+      "Se modificaron el precio y estado de algunos productos de acuerdo con las necesidades del cliente."
+    ],
+    "results": [
+      "Se mejoró la experiencia del usuario al ajustar el idioma de los textos en el sitio web.",
+      "Se testeo el chatbot entre el equipo y el cliente dueño de la marca para lanzar al público.",
+      "Se logró recuperar la información perdida tras el fallo del hosting."
+    ],
+    "image": {
+      "src": "/images/projects/farmavida.webp",
+      "alt": "Página principal del sitio web de Droguerías Farmavida mostrando productos y categorías."
+    },
+    "url": "https://drogueriasfarmavida.com/"
+  }
+]

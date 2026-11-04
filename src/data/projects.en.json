@@ -1,0 +1,97 @@
+
+[
+  {
+    "id": "overflight-app",
+    "name": "Overflight App",
+    "description": "A mobile app for managing flight overflight permissions with the authorities of the countries in the route.",
+    "objective": "Improve the app design and make the logic for managing overflight permissions functional.",
+    "participation": [
+      "Improving the visual interface and user experience of the application.",
+      "Fixing critical functionalities such as the process of requesting an overflight order",
+      "Restructuring the database almost completely."
+    ],
+    "technologies": {
+      "languages": ["Dart", "JavaScript"],
+      "frameworks": ["Flutter"],
+      "tools": ["Firebase", "Custom APIs", "FlutterFlow", "Stripe"]
+    },
+    "implementation": [
+      "Implementing the design decisions in the application to improve the interfaces and user experience, which were not optimized before.",
+      "Revising the application logic so that the process of requesting an overflight permit works correctly, using the FlutterFlow processes, such as custom functions in Dart and JavaScript.",
+      "Restructuring the application's database, which was disorganized and not scalable, to make it more efficient and easier to maintain."
+    ],
+    "results": [
+      "The application has a more attractive design and a smoother user experience without navigation flaws.",
+      "The process of requesting overflight permits works correctly: From the payment gateway to the sending of the permit email, and the notification of the Permit Number.",
+      "The organized database facilitated data insertion and search, indices and relationships between collections, which improves the performance and scalability of the application."
+    ],
+    "image": {
+      "src": "/images/projects/overflight_app.webp",
+      "alt": "Cover image of the Overflight app on Google Play"
+    },
+    "url": "https://play.google.com/store/apps/details?id=com.virtualtec.overflight&hl=es_CO"
+  },
+  {
+    "id": "si-18",
+    "name": "SI-18 Admin Panel",
+    "description": "A three-module dashboard for the Transmilenio mass transit operator, SI-18.",
+    "objective": "Implement the admin panel from the frontend perspective, consisting of three modules: Scheduling, Accounting and Purchasing.",
+    "participation": [
+      "I was directly responsible for creating the modules, components and functionalities of the project, with assisted help from AI.",
+      "Connecting with the API that the backend team sent to obtain data.",
+      "Participation in planning meetings, progress tracking and delivery of results."
+    ],
+    "technologies": {
+      "languages": ["TypeScript", "HTML", "CSS"],
+      "frameworks": ["React"],
+      "tools": ["Claude Code", "Postman", "VS Code", "DBeaver", "Figma", "Docker"]
+    },
+    "implementation": [
+      "I used React and Tailwind for the frontend development, with reusable components and statistical charts in each section of the dashboard.",
+      "I connected to the backend API to fetch data and display it in the dashboard within its respective modules represented in values, charts, tables and documents.",
+      "I implemented authentication logic based on roles, route protection, error handling and data loading states."
+    ],
+    "results": [
+      "The implementation of the dashboard improved the efficiency in data visualization, which was previously difficult to visualize only in a database.",
+      "Positive feedback was obtained from the end users intended to use it.",
+      "A improvement in the user experience was achieved by providing easier access to critical information."
+    ],
+    "image": {
+      "src": "/images/projects/si18-admin.webp",
+      "alt": "Dashboard administrativo responsive con tablas y tarjetas de métricas"
+    }
+  },
+  {
+    "id": "farmavida",
+    "name": "Droguerias Farmavida",
+    "description": "E-commerce for the sale of pharmaceutical and personal care products operating in Colombia.",
+    "objective": "Improve the user experience and attention on the website.",
+    "participation": [
+      "Had full access to the WordPress administrator, databases and hosting for management.",
+      "Access to the n8n node flow responsible for process automation such as a chatbot that suggests products to customers.",
+      "Possibility to modify products and prices of the e-commerce both through WordPress and through massive import files."
+    ],
+    "technologies": {
+      "languages": ["PHP", "JavaScript", "HTML", "CSS"],
+      "frameworks": ["WordPress", "WooCommerce"],
+      "tools": ["n8n", "Postman"]
+    },
+    "implementation": [
+      "Adjusted the language of the texts in the shopping and products section of the website, which some were in English due to the installed theme.",
+      "Configured an n8n node for customer service through a chatbot to suggest products based on the user's needs.",
+      "Created a backup of WordPress, as the hosting had crashed and access to the website was lost, but it was possible to restore and recover the information from the database and files of the website.",
+      "Fixed a problem when making a purchase from the website that made customers unsure if the purchase was completed correctly, as they were not receiving a confirmation email.",
+      "Modified the price and status of some products according to the client's needs."
+    ],
+    "results": [
+      "The user experience was improved by adjusting the language of the texts in the website.",
+      "The chatbot was tested between the team and the brand owner to launch to the public.",
+      "Lost information was recovered after the hosting failure."
+    ],
+    "image": {
+      "src": "/images/projects/farmavida.webp",
+      "alt": "Homepage of the Droguerías Farmavida website showing products and categories."
+    },
+    "url": "https://drogueriasfarmavida.com/"
+  }
+]

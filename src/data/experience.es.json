@@ -1,0 +1,60 @@
+[
+  {
+    "id": "ai-assisted-frontend-developer",
+    "role": "Desarrollador Frontend asistido por IA",
+    "dates": "Febrero 2026 - Agosto 2026",
+    "company": "Parker Randall Colombia",
+    "responsibilities": [
+      "Desarrollé y optimicé dashboards web interactivos para software de facturación electrónica, mejorando significativamente la visualización de datos y la experiencia del usuario.",
+      "Aproveché herramientas avanzadas de IA, incluyendo Claude AI, para acelerar el ciclo de desarrollo, agilizar la redacción de código y depurar estructuras de datos complejas.",
+      "Colaboré en la construcción de soluciones fintech escalables, asegurando la integración fluida de métricas de facturación en tiempo real e informes financieros."
+    ]
+  },
+  {
+    "id": "ai-assisted-software-developer",
+    "role": "Desarrollador de Software asistido por IA",
+    "dates": "Enero 2025 - Febrero 2026",
+    "company": "Virtual-Tec",
+    "responsibilities": [
+      "Desarrollé aplicaciones móviles y web utilizando la plataforma FlutterFlow, integrando servicios en tiempo real a través de Firebase.",
+      "Implementé funciones personalizadas utilizando Python y Node.js para abordar necesidades del negocio y optimizar la lógica del backend.",
+      "He creado aplicaciones de menú para restaurantes con Next.js usando herramientas de IA como Google Antigravity, además de realizar scraping web para obtener información sobre sus productos y mostrarla en las aplicaciones creadas."
+    ]
+  },
+  {
+    "id": "web-developer",
+    "role": "Desarrollador Web",
+    "dates": "Diciembre 2023 - Enero 2025",
+    "company": "MCA Systems",
+    "responsibilities": [
+      "Desarrollé y gestioné sitios web utilizando herramientas CMS como WordPress con Elementor y WPBakery, integrando HTML, CSS, JavaScript y PHP.",
+      "Construí sitios web dinámicos con sistemas de gestión de usuarios, incluyendo sesiones de inicio de sesión, funcionalidad CRUD y generación de informes.",
+      "He creado componentes y aplicaciones web interactivas utilizando React y Astro.",
+      "Gestioné servicios de hosting e implementé mejoras en el rendimiento del sitio web."
+    ]
+  },
+  {
+    "id": "systems-analyst",
+    "role": "Analista de Sistemas",
+    "dates": "Enero 2022 - Diciembre 2023",
+    "company": "Proyección Humana Internacional S.A.S",
+    "responsibilities": [
+      "Integré consideraciones técnicas en los planes de diseño, abordando presupuestos, rendimiento, accesibilidad y estándares de privacidad.",
+      "Gestioné servicios de hosting de sitios web multi-línea y utilicé WordPress con soluciones de bajo código para configuraciones personalizadas de plugins.",
+      "Conecté sitios web a pasarelas de pago como PayU y PayPal para transacciones fluidas.",
+      "Desarrollé formularios y reportes impulsados por base de datos utilizando PHP nativo y gestioné bases de datos con MySQL."
+    ]
+  },
+    {
+    "id": "web-designer-cms-developer",
+    "role": "Diseñador Web y Desarrollador CMS",
+    "dates": "Octubre 2020 - Febrero 2022",
+    "company": "Whitehub S.A.S",
+    "responsibilities": [
+      "Gestioné el hosting de sitios web, dominios, configuraciones de DNS y cuentas de correo electrónico usando cPanel, GoDaddy y Zoho.",
+      "Construí y mantuve sitios web de WordPress utilizando builders visuales como Divi y Elementor, y configuré WooCommerce para comercio electrónico.",
+      "Mejoré el rendimiento del sitio web usando PageSpeed Insights y analicé las métricas del sitio con Google Analytics.",
+      "Implementé integraciones de aplicaciones usando Zapier y configuré notificaciones push con OneSignal."
+    ]
+  }
+]

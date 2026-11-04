@@ -1,0 +1,315 @@
+---
+import type { SkillGroup } from "../types/skill";
+import type { Experience } from "../types/experience";
+
+interface Props {
+  lang: "en" | "es";
+  skills: SkillGroup[];
+  experiences: Experience[];
+}
+
+const { lang, skills, experiences } = Astro.props;
+const es = lang === "es";
+
+// Personaliza estos datos antes de publicar.
+const profile = {
+  name: "Orlando de Jesús Castro Castro",
+  title: es ? "Ingeniero telemático con experiencia en desarrollo frontend" : "Telematics engineer with experience in frontend development",
+  photo: "/images/profile.webp",
+  email: "orlancst@gmail.com",
+  phone: "(+57) 3008721501",
+  linkedin: "https://www.linkedin.com/in/orlan-castro/",
+  github: "https://github.com/orlancst",
+  location: es ? "Colombia" : "Colombia",
+  availability: es
+    ? ["Remoto en Colombia", "Remoto en LATAM", "Remoto en EE.UU/Canadá", "Remoto en Europa", "Presencial en Barranquilla (Atlántico) - Colombia", "Presencial en Rionegro o alrededores (Antioquia) - Colombia"]
+    : ["Remote in Colombia", "Remote in Latin America", "Remote in USA/Canada", "Remote in Europe", "On-site in Barranquilla (Atlántico) - Colombia", "On-site in Rionegro or nearby (Antioquia) - Colombia"],
+};
+---
+
+<!-- 1. HERO / INICIO -->
+<section
+  id="home"
+  class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20
+         sm:py-28 md:grid-cols-[1.4fr_0.6fr]"
+>
+  <div class="order-2 md:order-1">
+    <p class="font-semibold text-blue-600">
+      {es ? "Hola, soy" : "Hello, I'm"}
+    </p>
+
+    <h1
+      class="mt-3 text-4xl font-bold tracking-tight
+               sm:text-5xl lg:text-6xl"
+    >
+      {profile.name}
+    </h1>
+
+    <h2
+      class="mt-4 text-2xl font-semibold
+               text-slate-600 dark:text-slate-300"
+    >
+      {profile.title}
+    </h2>
+
+    <p
+      class="mt-6 max-w-2xl leading-8 text-slate-600
+              dark:text-slate-400"
+    >
+      {
+        es
+          ? "Desarrollo aplicaciones web combinando frontend y backend, con especial atención a la calidad del código, la experiencia de usuario y las soluciones mantenibles."
+          : "I build web applications across frontend and backend, focusing on code quality, user experience and maintainable solutions."
+      }
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a
+        href="#projects"
+        class="rounded-xl bg-blue-600 px-5 py-3
+               font-semibold text-white hover:bg-blue-700"
+      >
+        {es ? "Ver proyectos" : "View projects"}
+      </a>
+
+      <a
+        href="#contact"
+        class="rounded-xl border border-slate-300 px-5 py-3
+               font-semibold dark:border-slate-700"
+      >
+        {es ? "Contactarme" : "Contact me"}
+      </a>
+    </div>
+  </div>
+
+  <div class="order-1 mx-auto w-full max-w-xs md:order-2">
+    <img
+      src={profile.photo}
+      alt={es ? "Fotografía de perfil" : "Profile photo"}
+      width="480"
+      height="480"
+      fetchpriority="high"
+      class="aspect-square w-full rounded-3xl object-cover
+             ring-1 ring-slate-200 dark:ring-slate-700"
+    />
+  </div>
+</section>
+
+<!-- 2. SOBRE MÍ -->
+<section
+  id="about"
+  class="scroll-mt-8 border-y border-slate-200
+         bg-slate-50 dark:border-slate-800 dark:bg-slate-900/40"
+>
+  <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+    <p class="text-sm font-semibold uppercase tracking-widest text-blue-600">
+      {es ? "Conóceme" : "Get to know me"}
+    </p>
+
+    <h2 class="mt-3 text-3xl font-bold">
+      {es ? "Sobre mí" : "About me"}
+    </h2>
+
+    <div
+      class="mt-6 grid gap-8 leading-8 text-slate-600
+                dark:text-slate-400 md:grid-cols-2"
+    >
+      <p>
+        {
+          es
+            ? "Mi trayectoria en desarrollo de software se centra en construir aplicaciones web y servicios backend, aprendiendo nuevas tecnologías mediante proyectos prácticos."
+            : "My software development journey focuses on building web applications and backend services, learning new technologies through practical projects."
+        }
+      </p>
+
+      <p>
+        {
+          es
+            ? "Mi enfoque profesional combina código mantenible, diseño de soluciones, seguridad y colaboración. Me interesa participar en proyectos donde pueda aportar valor y seguir creciendo."
+            : "My professional approach combines maintainable code, solution design, security and collaboration. I enjoy projects where I can contribute value and continue growing."
+        }
+      </p>
+    </div>
+  </div>
+</section>
+
+<slot name="projects" />
+
+<!-- 4. HABILIDADES Y TECNOLOGÍAS -->
+<section id="skills" class="mx-auto max-w-6xl scroll-mt-8 px-5 py-16 sm:py-20">
+  <p class="text-sm font-semibold uppercase tracking-widest text-blue-600">
+    {es ? "Mi stack" : "My stack"}
+  </p>
+
+  <h2 class="mt-3 text-3xl font-bold">
+    {es ? "Habilidades y tecnologías" : "Skills and technologies"}
+  </h2>
+
+  <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      skills.map((group) => (
+        <article
+          class="rounded-2xl border border-slate-200 p-6
+               dark:border-slate-800 dark:bg-slate-900"
+        >
+          <h3 class="text-lg font-bold">{group.category}</h3>
+
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {group.items.map((skill) => (
+              <li
+                class="rounded-lg bg-slate-100 px-3 py-2 text-sm
+                     dark:bg-slate-800"
+              >
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<!-- 5. EXPERIENCIA PROFESIONAL -->
+<section
+  id="experience"
+  class="scroll-mt-8 border-y border-slate-200 bg-slate-50
+         dark:border-slate-800 dark:bg-slate-900/40"
+>
+  <div class="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+    <p class="text-sm font-semibold uppercase tracking-widest text-blue-600">
+      {es ? "Mi trayectoria" : "My journey"}
+    </p>
+
+    <h2 class="mt-3 text-3xl font-bold">
+      {es ? "Experiencia profesional" : "Professional experience"}
+    </h2>
+
+    <div class="mt-8 space-y-6">
+      {
+        experiences.map((experience) => (
+          <article
+            class="rounded-2xl border border-slate-200 bg-white p-6
+                 dark:border-slate-800 dark:bg-slate-950 sm:p-8"
+          >
+            <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+              <div>
+                <h3 class="text-xl font-bold">{experience.role}</h3>
+                <p class="mt-1 font-medium text-blue-600">
+                  {experience.company}
+                </p>
+              </div>
+
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                {experience.dates}
+              </p>
+            </div>
+
+            <ul
+              class="mt-5 list-disc space-y-2 pl-5 leading-7
+                     text-slate-600 dark:text-slate-400"
+            >
+              {experience.responsibilities.map((responsibility) => (
+                <li>{responsibility}</li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<!-- 6. CONTACTO -->
+<section id="contact" class="mx-auto max-w-6xl scroll-mt-8 px-5 py-16 sm:py-20">
+  <p class="text-sm font-semibold uppercase tracking-widest text-blue-600">
+    {es ? "Hablemos" : "Let's connect"}
+  </p>
+
+  <h2 class="mt-3 text-3xl font-bold">
+    {es ? "Contacto" : "Contact"}
+  </h2>
+
+  <p class="mt-4 max-w-2xl leading-7 text-slate-600 dark:text-slate-400">
+    {
+      es
+        ? "Estoy abierto a conversar sobre proyectos, oportunidades laborales y colaboraciones profesionales."
+        : "I'm open to discussing projects, career opportunities and professional collaborations."
+    }
+  </p>
+
+  <div class="mt-8 grid gap-4 sm:grid-cols-2">
+    <span
+      class="rounded-xl border border-slate-200 p-5
+             hover:border-blue-500 dark:border-slate-800"
+    >
+      <span class="font-semibold">
+        {es ? "Teléfono" : "Phone number"}
+      </span>
+      <span class="mt-2 block break-all text-slate-600 dark:text-slate-400">
+        {profile.phone}
+      </span>
+    </span>
+
+    <a
+      href={`mailto:${profile.email}`}
+      class="rounded-xl border border-slate-200 p-5
+             hover:border-blue-500 dark:border-slate-800"
+    >
+      <span class="font-semibold">Email</span>
+      <span class="mt-2 block break-all text-slate-600 dark:text-slate-400">
+        {profile.email}
+      </span>
+    </a>
+
+    <a
+      href={profile.linkedin}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="rounded-xl border border-slate-200 p-5
+             hover:border-blue-500 dark:border-slate-800"
+    >
+      <span class="font-semibold">LinkedIn</span>
+      <span class="mt-2 block text-slate-600 dark:text-slate-400">
+        {es ? "Ver perfil profesional ↗" : "View professional profile ↗"}
+      </span>
+    </a>
+
+    <a
+      href={profile.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="rounded-xl border border-slate-200 p-5
+             hover:border-blue-500 dark:border-slate-800"
+    >
+      <span class="font-semibold">GitHub</span>
+      <span class="mt-2 block text-slate-600 dark:text-slate-400">
+        {es ? "Ver repositorios ↗" : "View repositories ↗"}
+      </span>
+    </a>
+
+    <div class="rounded-xl border border-slate-200 p-5 dark:border-slate-800">
+      <span class="font-semibold">
+        {es ? "Ubicación" : "Location"}
+      </span>
+
+      <p class="mt-2 text-slate-600 dark:text-slate-400">
+        {profile.location}
+      </p>
+
+      <p class="mt-3 text-sm font-medium">
+        {es ? "Disponibilidad" : "Availability"}
+      </p>
+
+      <ul class="mt-2 flex flex-wrap gap-2">
+        {
+          profile.availability.map((place) => (
+            <li class="rounded-full bg-slate-100 px-3 py-1 text-sm dark:bg-slate-800">
+              {place}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

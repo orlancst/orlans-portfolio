@@ -1,0 +1,83 @@
+
+[
+  {
+    "id": "frontend",
+    "category": "Frontend Development",
+    "items": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "React",
+      "Next.js",
+      "Astro",
+      "Flutterflow (Flutter)",
+      "Expo (React Native)",
+      "Bootstrap, Bulma and Tailwind CSS Frameworks"
+    ]
+  },
+  {
+    "id": "backend",
+    "category": "Backend Development",
+    "items": [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "JWT Authentication"
+    ]
+  },
+  {
+    "id": "databases",
+    "category": "Databases",
+    "items": [
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "Firebase Firestore",
+      "SQLite"
+    ]
+  },
+      {
+    "id": "wordpress",
+    "category": "WordPress (CMS)",
+    "items": [
+      "Installation and initial configuration",
+      "Elementor, Divi, WPBakery and other page builders",
+      "Website maintenance and plugin updates",
+      "On-page SEO and speed optimization",
+      "Theme configuration and template customization",
+      "Form integration and third-party plugin implementation",
+      "Security and backup configuration",
+      "HTML, CSS, JS and PHP code for custom functionalities",
+      "WooCommerce setup and product management",
+      "Payment gateways and shipping methods",
+      "Domain, DNS and hosting configuration"
+    ]
+  },
+  {
+    "id": "tools",
+    "category": "Tools, Testing and DevOps",
+    "items": [
+      "Git/GitHub",
+      "Postman/Insomnia",
+      "Linux Terminal",
+      "Figma",
+      "n8n",
+      "Playwright"
+    ]
+  },
+
+    {
+    "id": "ai-tools",
+    "category": "AI Tools",
+    "items": [
+      "Claude Code",
+      "Claude Design",
+      "OpenCode",
+      "Google Antigravity",
+      "v0 (Vercel)"
+    ]
+  }
+  
+]

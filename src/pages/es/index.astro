@@ -1,0 +1,48 @@
+
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PortfolioSections from "../../components/PortfolioSections.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+import projectsData from "../../data/projects.es.json";
+import skillsData from "../../data/skills.es.json";
+import experienceData from "../../data/experience.es.json";
+
+import type { Project } from "../../types/project";
+import type { SkillGroup } from "../../types/skill";
+import type { Experience } from "../../types/experience";
+
+const projects: Project[] = projectsData;
+const skills: SkillGroup[] = skillsData;
+const experiences: Experience[] = experienceData;
+---
+
+<BaseLayout
+  lang="es"
+  title="Tu Nombre | Desarrollador Full Stack"
+  description="Conoce mis proyectos, habilidades y experiencia profesional."
+>
+  <PortfolioSections lang="es" skills={skills} experiences={experiences}>
+    <section
+      slot="projects"
+      id="projects"
+      class="mx-auto max-w-6xl scroll-mt-8 px-5 py-16"
+    >
+      <p class="text-sm font-semibold uppercase tracking-widest text-blue-600">
+        Portfolio
+      </p>
+
+      <h2 class="mt-3 text-3xl font-bold">Proyectos destacados</h2>
+
+      <p class="mt-4 text-slate-600 dark:text-slate-400">
+        Una selección de proyectos que he creado o estoy desarrollando.
+      </p>
+
+      <div class="mt-8 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => (
+          <ProjectCard project={project} lang="es" />
+        ))}
+      </div>
+    </section>
+  </PortfolioSections>
+</BaseLayout>

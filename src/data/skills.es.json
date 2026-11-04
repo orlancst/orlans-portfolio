@@ -1,0 +1,82 @@
+
+[
+  {
+    "id": "frontend",
+    "category": "Desarrollo Frontend",
+    "items": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "React",
+      "Next.js",
+      "Astro",
+      "Flutterflow (Flutter)",
+      "Expo (React Native)",
+      "Bootstrap, Bulma y Tailwind CSS Frameworks"
+    ]
+  },
+  {
+    "id": "backend",
+    "category": "Desarrollo Backend",
+    "items": [
+      "Node.js",
+      "Express.js",
+      "APIs REST",
+      "Autenticación JWT"
+    ]
+  },
+  {
+    "id": "databases",
+    "category": "Bases de datos",
+    "items": [
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "Firebase Firestore",
+      "SQLite"
+    ]
+  },
+    {
+    "id": "wordpress",
+    "category": "WordPress (CMS)",
+    "items": [
+      "Instalación y configuración inicial",
+      "Elementor, Divi, WPBakery y otros constructores de páginas",
+      "Mantenimiento de sitios web y actualizaciones de plugins",
+      "SEO on-page y optimización de velocidad",
+      "Configuración de temas y personalización de plantillas",
+      "Integración de formularios y plugins de terceros",
+      "Seguridad y backups del sitio web",
+      "Código HTML, CSS, JS y PHP para funcionalidades personalizadas",
+      "Configuración de WooCommerce y gestión de productos",
+      "Pasarelas de pago y métodos de envío",
+      "Configuración de dominios, DNS y hosting"
+    ]
+  },
+  {
+    "id": "tools",
+    "category": "Herramientas, Testing y DevOps",
+    "items": [
+      "Git/GitHub",
+      "Postman/Insomnia",
+      "Linux Terminal",
+      "Figma",
+      "n8n",
+      "Playwright"
+    ]
+  },
+
+    {
+    "id": "ai-tools",
+    "category": "Herramientas de IA",
+    "items": [
+      "Claude Code",
+      "Claude Design",
+      "OpenCode",
+      "Google Antigravity",
+      "v0 (Vercel)"
+    ]
+  }
+]
