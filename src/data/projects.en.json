@@ -31,6 +31,39 @@
     },
     "url": "https://play.google.com/store/apps/details?id=com.virtualtec.overflight&hl=es_CO"
   },
+    {
+    "id": "hot-punto-multiple",
+    "name": "Restaurant Web Hot Punto Multiple del Sabor",
+    "description": "Website for ordering quick meals for delivery or direct pickup at the restaurant.",
+    "objective": "Propose a new version of the original website with improvements for home delivery.",
+    "participation": [
+      "Generate a modern and attractive design for the website using v0 (Vercel).",
+      "Obtain products and their information through Web Scraping of the original restaurant to display them on the new website.",
+      "Implement a customization system for additional options for quick meal products, specifically for some pizzas that are to the customer's taste",
+      "Implement shipping methods according to the customer's location, the restaurant's location, and the availability of deliveries."
+    ],
+    "technologies": {
+      "languages": ["TypeScript", "GeoJSON", "Python"],
+      "frameworks": ["Next.js", "Leaflet.js"],
+      "tools": ["Google Antigravity", "v0 (Vercel)"]
+    },
+    "implementation": [
+      "Several design proposals were presented for the website thanks to the v0 tool, and the one that best adapted to the client's needs was chosen. From there, sections were modified to add banners, buttons, menus and alternative pages for the needs of the restaurant website.",
+      "Through a Python script that allowed extracting information from the original restaurant's products and storing it in an initial JSON file.",
+      "Through the JSON obtained from the web scraping, the logic was implemented so that customers can customize their orders: Quantity, additional options according to the product and additional notes from the customer.",
+      "A delivery system was implemented: Go to the sales point or by home delivery. In both cases, it is required to have all sales points through their geographic coordinates stored in a GeoJSON file, adding their opening and closing hours, so that the customer can choose the closest sales point to their location and that it is open at the time of purchase."
+    ],
+    "results": [
+      "Several design proposals were presented for the website thanks to the v0 tool, and the one that best adapted to the client's needs was chosen.",
+      "The client agreed with the way the client chooses the products and customizes them for the order.",
+      "The client tested the delivery system through the map and tested the different ways the client interacts with the website to place an order for quick meals."
+    ],
+    "image": {
+      "src": "/images/projects/punto-multiple.webp",
+      "alt": "Section of product categories for Hot Punto Multiple del Sabor."
+    },
+    "url": "https://hotrestaurante-flax.vercel.app/"
+  },
   {
     "id": "si-18",
     "name": "SI-18 Admin Panel",
@@ -93,5 +126,34 @@
       "alt": "Homepage of the Droguerías Farmavida website showing products and categories."
     },
     "url": "https://drogueriasfarmavida.com/"
+  },
+      {
+    "id": "hoteles-byhours-web",
+    "name": "Hoteles ByHours Website",
+    "description": "Website for selling hourly room bookings from a hotel chain operating in Barranquilla and Bogotá (Colombia).",
+    "objective": "Create and configure the website for selling hourly room bookings.",
+    "participation": [
+      "Responsibility of creating the website from scratch, with the design proposed by the design team and the configuration of the necessary plugins for its operation."
+    ],
+    "technologies": {
+      "languages": ["PHP", "JavaScript", "HTML", "CSS"],
+      "frameworks": ["WordPress"],
+      "tools": []
+    },
+    "implementation": [
+      "Initialized and configured WordPress with the theme proposed by the design team, and the necessary plugins for building the website.",
+      "Created the booking form natively (HTML, CSS, JavaScript through custom snippets) that leads users to a WhatsApp chat to complete the room reservation.",
+      "Created the respective pages for each hotel according to the content established by the marketing team; displaying information about each one, such as photos, services, location and prices.",
+      "Added multilingual support (English and Spanish) and SEO tracking metrics to improve the website's visibility."
+    ],
+    "results": [
+      "The visual expectations of the client regarding colors, texts and content presented on the website were met.",
+      "The functionality of the booking form was successful both on the web and responsive, leading users to the WhatsApp chat with the room reservation parameters."
+    ],
+    "image": {
+      "src": "/images/projects/byhours.webp",
+      "alt": "Página principal del sitio web de Hoteles ByHours."
+    },
+    "url": "https://byhours.com.co/home/"
   }
 ]

@@ -32,6 +32,39 @@
     "url": "https://play.google.com/store/apps/details?id=com.virtualtec.overflight&hl=es_CO"
   },
   {
+    "id": "hot-punto-multiple",
+    "name": "Restaurante Web Hot Punto Multiple del Sabor",
+    "description": "Sitio web para pedir productos de comida rápida por domicilio o entrega directa en el restaurante.",
+    "objective": "Proponer una nueva version del sitio web original con mejoras para entrega de domicilios.",
+    "participation": [
+      "Generar un diseño moderno y atractivo para el sitio web usando v0 (Vercel).",
+      "Obtener los productos y su información mediante Web Scraping del restaurante original para mostrarlos en el nuevo sitio web.",
+      "Implementar un sistema de personalizacion de adicionales para los productos de comida rapida, especificamente para algunas pizzas que son al gusto del cliente",
+      "Implementar metodos de envio segun la ubicación del cliente, del restaurante y de la disponibilidad de los domicilios."
+    ],
+    "technologies": {
+      "languages": ["TypeScript", "GeoJSON", "Python"],
+      "frameworks": ["Next.js", "Leaflet.js"],
+      "tools": ["Google Antigravity", "v0 (Vercel)"]
+    },
+    "implementation": [
+      "Se presento varias propuestas de diseño para el sitio web gracias a la herramienta de v0 y se eligió la que mejor se adaptaba a las necesidades del cliente. A partir de ahi, se modficaron secciones para agregar banners, botones, menús y paginas alternativas para las necesidades del restaurante web.",
+      "A través de un script de Python que permitió extraer la información de los productos del restaurante original, y almacenarla en un archivo JSON inicial.",
+      "A traves del JSON obtenido del web scraping, se implemento la logica para que los clientes puedan personalizar sus pedidos: Cantidad, adicionales segun el producto y notas adicionales del cliente.",
+      "Se implementó un sistema de entregas: Ir al punto de venta o por domicilio. En ambos, es requerido tener todos los puntos de venta a traves de sus coordenadas geograficas almacenadas en un archivo GeoJSON, adicionando sus horarios de apertura y cierre, para que el cliente pueda elegir el punto de venta mas cercano a su ubicación y que este abierto en el momento de la compra."
+    ],
+    "results": [
+      "Se le presentó al cliente una propuesta de diseño moderno y atractivo para el sitio web, que fue bien recibida.",
+      "El cliente estuvo de acuerdo con la forma en como el cliente elige los productos y los personaliza para el pedido.",
+      "El cliente probó el sistema de entregas a traves del mapa y se probo las distintas formas en como el cliente interactua con el sitio web para poder hacer el pedido de comida rapida."
+    ],
+    "image": {
+      "src": "/images/projects/punto-multiple.webp",
+      "alt": "Seccion de categorias de productos de Hot Punto Multiple del Sabor."
+    },
+    "url": "https://hotrestaurante-flax.vercel.app/"
+  },
+  {
     "id": "si-18",
     "name": "Panel administrativo SI-18",
     "description": "Un dashboard de tres módulos para la operadora de transporte masivo de Transmilenio, SI-18.",
@@ -93,5 +126,34 @@
       "alt": "Página principal del sitio web de Droguerías Farmavida mostrando productos y categorías."
     },
     "url": "https://drogueriasfarmavida.com/"
+  },
+  {
+    "id": "hoteles-byhours-web",
+    "name": "Sitio web de Hoteles ByHours",
+    "description": "Sitio web para la venta de reservas de habitaciones por horas de una cadena de hotele que tiene sus estancias en Barranquilla y Bogotá (Colombia).",
+    "objective": "Crear y configurar el sitio web para la venta de reservas de habitaciones por horas.",
+    "participation": [
+      "Responsabilidad de crear el sitio web desde cero, con el diseño planteado por el equipo de diseño y la configuración de los plugins necesarios para su funcionamiento."
+    ],
+    "technologies": {
+      "languages": ["PHP", "JavaScript", "HTML", "CSS"],
+      "frameworks": ["WordPress"],
+      "tools": []
+    },
+    "implementation": [
+      "Se Inicializó y configuró el WordPress con el tema planteado por el equipo de diseño, y los plugins necesarios para la construcción del sitio web.",
+      "Se creó de forma nativa (HTML, CSS, JavaScript mediante snippets personalizados) el formulario de reserva de agendamientos, que lleva a los usuarios a un chat de WhatsApp para finalizar la reserva de la habitación.",
+      "Se crearon las paginas respectivas respectivas para cada hotel segun el contenido establecido por el equipo de publicidad; mostrando la información de cada uno, como fotos, servicios, ubicación y precios.",
+      "Se agregó soporte multiidioma (inglés y español) y metricas de seguimiento SEO para majorar la visibilidad del sitio web."
+    ],
+    "results": [
+      "Se lograron las espectativas a nivel visual del cliente de los colores, textos y contenido presentado en el sitio web.",
+      "El funcionamiento del formulario de reservas fue exitoso tanto en web como en responsive, llevando a usuarios al chat de WhatsApp con los parametros de reserva de la habitación."
+    ],
+    "image": {
+      "src": "/images/projects/byhours.webp",
+      "alt": "Página principal del sitio web de Hoteles ByHours."
+    },
+    "url": "https://byhours.com.co/home/"
   }
 ]
